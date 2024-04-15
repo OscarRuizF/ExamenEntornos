@@ -10,7 +10,7 @@ public class SuscripcionNetflix {
 		super();
 		this.email = email;
 		this.numTarjeta = numTarjeta;
-		this.numPerfiles = 3; //por defecto te ofrece 3 perfiles
+		this.numPerfiles = 4; //por defecto te ofrece 3 perfiles
 	} 
 	 
 	public double cuotaPagar(int modoPago) {
