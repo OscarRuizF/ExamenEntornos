@@ -1,10 +1,21 @@
 package Netflix;
 
+/**
+ * @version 1.0
+ * @author suros
+ */
+
 public class SuscripcionNetflix {
 
 	String email;
 	String numTarjeta;
 	int numPerfiles;
+ 
+	/**
+	 * @since 1.1
+	 * @param email
+	 * @param numTarjeta
+	 */
 	
 	public SuscripcionNetflix(String email, String numTarjeta) {
 		super();
@@ -13,6 +24,12 @@ public class SuscripcionNetflix {
 		this.numPerfiles = 4; //por defecto te ofrece 3 perfiles
 	} 
 	 
+	/**
+	 * 
+	 * @param modoPago
+	 * @return devuelve la cuota a pagar por las subscripcion
+	 */
+	
 	public double cuotaPagar(int modoPago) {
 		double cuota = 0;
 		//Si pago es Anual, se hace un descuento al total
@@ -33,7 +50,11 @@ public class SuscripcionNetflix {
 		return redondearDoubleDosDecimales(cuotaPagarTotal / this.numPerfiles);
 	}
 	
-	
+	/**
+	 * @deprecated metodo oboslote sustituido por (#link redondearDoubleDosDecimales)
+	 * @param modoPago
+	 * @return
+	 */
 	public double cuotaPerfiles(int modoPago) {
 		return redondearDoubleDosDecimales(Constantes.PRECIO_NETFLIX_TOTAL / this.numPerfiles);
 	}
